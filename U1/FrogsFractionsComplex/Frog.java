@@ -90,3 +90,14 @@ public class Frog {
 	}
 
 }
+
+// Freddy
+// Yum
+// Hi I am Freddy the frog and I live at 3 5
+// Francine
+// Yum
+// Hi I am Freddy the frog and I live at 0 2  
+// Hi I am Francine the frog and I live at 0 2
+// Frank
+// Hi I am Frank the frog and I live at 2 2   
+// Hi I am Frank the frog and I live at 0 2  
