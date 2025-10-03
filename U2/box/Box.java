@@ -1,4 +1,4 @@
-package U1.box;
+package U2.box;
 
 public class Box {
     // attributes

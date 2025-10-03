@@ -1,4 +1,4 @@
-package U1.FrogsFractionsComplex;
+package U2.FrogsFractionsComplex;
 
 public class Fractions {
 	private int numerator;		//attributes
