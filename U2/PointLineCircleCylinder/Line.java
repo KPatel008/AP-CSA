@@ -15,11 +15,20 @@ public class Line {
         end2 = new Point();
     }
 
+    /*
+     * Finds the length of a line
+     * @return - int - the length of the line
+     */
     public double distance()
     {
         double a = Math.sqrt(Math.pow((end2.getX() - end1.getX()),2) + Math.pow((end2.getY() - end1.getY()), 2));
         return a;
     }
+
+    /**
+     * Finds the midpoint of a line
+     * @return - Point - the midpoint of the line
+     */
    public Point midpoint()
    {
     double midX = (end1.getX() + end2.getX())/2;
@@ -48,6 +57,12 @@ public class Line {
         return Math.abs(m1-m2) <= .0001;
 
     }
+
+    /**
+     * Checks if two lines are the same length
+     * @param otherLine - the other line to compare to
+     * @return - boolean - true if the lines are the same length, false otherwise
+     */
     public boolean sameLength(Line otherLine)
     {
         double l1 = this.distance();
@@ -78,4 +93,13 @@ public class Line {
     }
 
 }
+
+// Line with endpoints (-1.0, -3.0) and (2.0, 1.0)
+// distance = 5.0
+// Midpoint = (0.5, -1.0)    
+// Slope = 1.3333333333333333
+// Slope = 1.3333333333333333
+// distance = 5.0
+// Parallel? true
+// Same length? true
 
