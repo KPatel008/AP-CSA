@@ -16,6 +16,11 @@ public class Strings {
         return end + first;
     }
 
+    /**
+     * takes a name in the format "last, first" and converts it to "first last"
+     * @param - String name- the name in "last, first" format
+     * @return - String - the name in "first last" format
+     */
     public static String convertName(String name) {
         int commaloc = name.indexOf(",");
         String last = name.substring(0, commaloc);
@@ -25,11 +30,21 @@ public class Strings {
         return trimfirst + " " + trimlast;
     }
 
+    /**
+     * removes the dashes from a social security number
+     * @param - String SSN - the social security number in the format "123-45-6789"
+     * @return - String - the social security number in the format "123456789"
+     */
     public static String removeSSN(String SSN) {
         String newSSN = SSN.replace("-", "");
         return newSSN;
     }
 
+    /**
+     * converts a date from MM/DD/YYYY format to DD-MM-YYYY format
+     * @param - String dateStr - the date in MM/DD/YYYY format
+     * @return - String - the date in DD-MM-YYYY format
+     */
     public static String dateString(String dateStr) {
         int len = dateStr.length();
         int slash1 = dateStr.indexOf("/");
@@ -40,6 +55,11 @@ public class Strings {
         return day + "-" + month + "-" + year;
     }
 
+    /**
+     * takes a binary number as a string and returns the negative of that number
+     * @param - String number - the binary number as a string
+     * @return - String - the negative of the binary number as a string
+     */
     public static String negative(String number) {
         String part1 = number.replace("1", "a");
         String part2 = part1.replace("0", "1");
@@ -47,6 +67,10 @@ public class Strings {
         return part3;
     }
 
+    /**
+     * makes rhyme with given name
+     * @return - void
+     */
     public static void nameGame() {
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
@@ -55,11 +79,20 @@ public class Strings {
 
         int space = name.indexOf(" ");
 
-        String firstname = name.substring(0, space);
-        int firstlen = firstname.length();
-        String firstlettergone = name.substring(1,firstlen);
-        System.out.println(firstname + ", " + firstname + ", bo-B" + firstlettergone);
+        String firstName = name.substring(0, space);
+        int firstlen = firstName.length();
+        String firstLetterGone = firstName.substring(1,firstlen);
+        System.out.println(firstName + ", " + firstName + ", bo-B" + firstLetterGone);
+        System.out.println("Banana-fana fo-F" + firstLetterGone);
+        System.out.println("Fee-fi-mo-M" + firstLetterGone);
+        System.out.println(firstName.toUpperCase() + "!");
 
+        String lastName = name.substring(space + 1,name.length());
+        String lastLetterGone = lastName.substring(1, lastName.length());
+        System.out.println(lastName + ", " + lastName + ", bo-B" + lastLetterGone);
+        System.out.println("Banana-fana fo-F" + lastLetterGone);
+        System.out.println("Fee-fi-mo-M" + lastLetterGone);
+        System.out.println(lastName.toUpperCase() + "!");
     }
 
     public static void main(String[] args) {
@@ -80,6 +113,28 @@ public class Strings {
 
     System.out.println("04/20/2025 becomes " + dateString("04/20/2025"));
     System.out.println("4/2/2025 becomes " + dateString("4/2/2025"));
-    // nameGame();
+    nameGame();
     }
 }
+
+// ello WorldH
+// appyh
+// h
+// Lori Renee Reubenstein
+// Taylor Swift
+// Bozo the Clown
+// 123-45-6789 is 123456789
+// 1101000110
+// 00000000
+// 04/20/2025 becomes 20-04-2025
+// 4/2/2025 becomes 2-4-2025
+// What is your name?
+// Krish Patel
+// Krish, Krish, bo-Brish
+// Banana-fana fo-Frish
+// Fee-fi-mo-Mrish
+// KRISH!
+// Patel, Patel, bo-Batel
+// Banana-fana fo-Fatel
+// Fee-fi-mo-Matel
+// PATEL!
