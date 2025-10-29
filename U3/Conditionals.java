@@ -161,7 +161,7 @@ public class Conditionals {
         int bg = blackjack(12,18);
         System.out.println(ba + " " + bb + " " + bc + " " + bd + " " + be + " " + bf + " " + bg);
 
-
+        
         String p2a = popBang("party");
         String p2b = popBang("glob");
         String p2c = popBang("plumb"); 
