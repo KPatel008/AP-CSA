@@ -1,6 +1,13 @@
 package U3;
 
 public class Conditionals {
+
+    /*
+     * determines if there is trouble based on their attitudes
+     * @param - boolean aSmile - is A smiling
+     * @param - boolean bSmile - is B smiling
+     * @return - boolean - true if there is trouble, false if there is not
+     */
     public static boolean freshmanTrouble(boolean aSmile, boolean bSmile) {
         boolean trouble = false;
         if (aSmile != bSmile)
@@ -10,17 +17,31 @@ public class Conditionals {
         return trouble;
     }
 
-    public static boolean negPos(int num1, int num2, boolean a) {
-        if ((num1 < 0 && num2 < 0) && a) {
+    /*
+     * determines if one number is negative and one number is positive and will return true, unless negative is true, then it will return true if both numbers are negative
+     * @param - int num1 - the first number
+     * @param - int num2 - the second number
+     * @param - boolean negative - indicates if both numbers should be negative
+     * @return - boolean - true if one number is negative and one is positive, or if both are negative based on the flag
+     */
+    public static boolean negPos(int num1, int num2, boolean negative) {
+        if ((num1 < 0 && num2 < 0) && negative) {
             return true;
         }
-        if ((num1 < 0 && num2 > 0 || num1 > 0 && num2 < 0) && !a){
+        if ((num1 < 0 && num2 > 0 || num1 > 0 && num2 < 0) && !negative){
             return true;
         }
         else
             return false;
     }
 
+    /*
+     * determines if you should pick up the phone based on the time of day, who is calling, and if you are asleep
+     * @param - boolean isMorning - indicates if it is morning
+     * @param - boolean isMom - indicates if it is your mom calling
+     * @param - boolean isAsleep - indicates if you are asleep
+     * @return - boolean - true if you should pick up the phone, false if you should not
+     */
     public static boolean pickUpPhone(boolean isMorning, boolean isMom, boolean isAsleep) {
         if (isAsleep) {
             return false;
@@ -34,6 +55,12 @@ public class Conditionals {
         else {return true;}
     }
 
+    /*
+     * determines what time to set the alarm based on the day of the week and if you are on vacation
+     * @param - int day - the day of the week
+     * @param - boolean vac - indicates if you are on vacation
+     * @return - String - the time to set the alarm ("7:00", "10:00", or "off")
+     */
     public static String setAlarm(int day, boolean vac) {
         if (vac) {
             if (day >= 1 && day <= 5) {
@@ -53,6 +80,13 @@ public class Conditionals {
         }
     }
 
+    /*
+     * determines if two or more numbers have the same ones digit
+     * @param - int a - the first number
+     * @param - int b - the second number
+     * @param - int c - the third number
+     * @return - boolean - true if two or more numbers have the same ones digit, false if none do
+     */
     public static boolean onesDigitSame(int a, int b, int c) {
          a = a%10;
          b = b%10;
@@ -63,6 +97,12 @@ public class Conditionals {
             return false;
     }
 
+    /*
+     * determines which number is closest to 21 without going over
+     * @param - int a - the first number
+     * @param - int b - the second number
+     * @return - int - the number closest to 21 without going over, or 0 if both numbers go over
+     */
     public static int blackjack(int a, int b) {
         if (a>21&&b>21) {
             return 0;
@@ -80,6 +120,11 @@ public class Conditionals {
             return b;
         }
 
+        /*
+         * determines if a string starts with 'p' and ends with 'b' and returns a specific string based on that
+         * @param - String str - the input string
+         * @return - String - "Pop" if 'p', "Bang" if 'b', "PopBang" if both, or regular string if neither
+         */
     public static String popBang(String str) {
         String first = str.substring(0,1);
         String last = str.substring(str.length()-1);
@@ -161,7 +206,9 @@ public class Conditionals {
         int bg = blackjack(12,18);
         System.out.println(ba + " " + bb + " " + bc + " " + bd + " " + be + " " + bf + " " + bg);
 
-        
+        System.out.println("");
+
+        System.out.println("popBang");
         String p2a = popBang("party");
         String p2b = popBang("glob");
         String p2c = popBang("plumb"); 
