@@ -216,3 +216,24 @@ public class Conditionals {
         System.out.println(p2a + " " + p2b + " " + p2c + " " + p2d);
     }
 }
+
+// freshmanTrouble
+// true true false false
+
+// negPos
+// true true false false true false false false
+
+// pickUpPhone
+// false false true true false true
+
+// setAlarm
+// 7:00 7:00 10:00 10:00 10:00 off
+
+// onesDigitSame
+// true false true true false
+
+// blackjack
+// 21 21 19 8 0 17 18
+
+// popBang
+// Pop Bang PopBang hello
