@@ -116,3 +116,51 @@ public class CrapsGame
     cg.playGame();
   }
 }
+
+// You rolled: 5
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 9
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 6
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 11
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 8
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 4
+// Point is set to: 5. Roll again! (Press Enter to roll, q to quit)
+// 0 games won 0 games lost.
+
+// You rolled: 5
+// You win!
+// Point is set to: 0. Roll again! (Press Enter to roll, q to quit)
+// 1 games won 0 games lost.
+
+// You rolled: 9
+// Point is set to: 9. Roll again! (Press Enter to roll, q to quit)
+// 1 games won 0 games lost.
+
+// You rolled: 5
+// Point is set to: 9. Roll again! (Press Enter to roll, q to quit)
+// 1 games won 0 games lost.
+
+// You rolled: 5
+// Point is set to: 9. Roll again! (Press Enter to roll, q to quit)
+// 1 games won 0 games lost.
+
+// You rolled: 9
+// You win!
+// Point is set to: 0. Roll again! (Press Enter to roll, q to quit)
+// 2 games won 0 games lost.
+// q
+// You won 100.0% of the time

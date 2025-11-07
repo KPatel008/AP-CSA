@@ -1,4 +1,4 @@
-package U3;
+package U3.Conditionals;
 
 public class Conditionals {
 
