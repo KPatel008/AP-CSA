@@ -32,8 +32,8 @@ public class MathEx {
      */
     public static int swap(int num) {
         int tens = num%100/10;
-        int ones = (num%10)*10;
-        int others = (num/100)*100;
+        int ones = (num%10)/1;
+        int others = (num/100);
 
 
         return others + ones + tens;
