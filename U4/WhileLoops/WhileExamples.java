@@ -1,3 +1,4 @@
+package WhileLoops;
 public class WhileExamples {
     public static int sumUpToWhile(int n)
     {

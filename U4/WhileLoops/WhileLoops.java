@@ -1,3 +1,4 @@
+package WhileLoops;
 public class WhileLoops {
     public static int addOdds(int n) {
         int i = 1;
@@ -49,14 +50,12 @@ public class WhileLoops {
 
     public static boolean isPerfectSquare(int n) {
         int i = 1;
-        int sum = 1;
-        int squared = (int) Math.pow(n,2);
-        while (i >= n) {
-            sum += 2;
-            i++;
+        int sum = 0;
+        while (sum < n) {
+            sum += i;
+            i += 2;
         }
-        if (sum == squared) {return true;}
-        return false;
+        return sum == n;
     }
     public static void main(String[] args) {
         System.out.println("addOdds");
@@ -83,5 +82,41 @@ public class WhileLoops {
         printSum(6);
         printSum(8);
         printSum(3);
+
+        System.out.println("");
+
+        System.out.println("isPerfectSquare");
+        System.out.println(isPerfectSquare(25));
+        System.out.println(isPerfectSquare(49));
+        System.out.println(isPerfectSquare(37));
+        System.out.println(isPerfectSquare(50));
     }
 }
+
+// addOdds
+// 9
+// 100
+// 36
+
+// sumDigits
+// 4
+// 6
+// 7
+
+// howManyYears
+// 7
+// 27
+
+// printSum
+// n = 6
+// 1 + 2 + 3 + 4 + 5 + 6 = 21
+// n = 8
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36
+// n = 3
+// 1 + 2 + 3 = 6
+
+// isPerfectSquare
+// true
+// true
+// false
+// false
