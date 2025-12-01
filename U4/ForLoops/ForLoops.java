@@ -37,11 +37,48 @@ public class ForLoops {
         return stuttered;
     }
 
-    // public static void sillyNumbers() {
-    //     for (int num = 1; num < 10; num++) {
-    //         System.out.print();
-    //     }
-    // }
+    public static void sillyNumbers() {
+        for (int a = 0; a < 3; a++) {
+            for (int num = 0; num < 10; num++) {
+                for (int i = 0; i < 3; i++) {
+                    System.out.print(num);
+                }
+            }
+        System.out.println("");
+        }
+    }
+
+    public static void sillyNumbers2() {
+        for (int a = 0; a < 4; a++) {
+            for (int num = 9; num != 0; num--) {
+                for (int i = 0; i < num; i++) {
+                    System.out.print(num);
+                }
+            }
+        System.out.println("");
+        }
+    }
+
+    public static void dollarsAndStars() {
+        for (int line = 0; line < 7; line++) {
+            for (int star1 = 0; star1 < line*2; star1++) {
+                System.out.print("*");
+            }
+            for (int dollar1 = 7; dollar1 > line; dollar1--) {
+                System.out.print("$");
+            }
+            for (int star2 = 14; star2 > line*2; star2--) {
+                System.out.print("*");
+            }
+            for (int dollar2 = 7; dollar2 > line; dollar2--) {
+                System.out.print("$");
+            }
+            for (int star3 = 0; star3 < line*2; star3++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("addEvens");
@@ -69,6 +106,54 @@ public class ForLoops {
         System.out.println("");
 
         System.out.println("sillyNumbers");
+        sillyNumbers();
+        System.out.println("");
 
+        System.out.println("sillyNumbers2");
+        sillyNumbers2();
+        System.out.println("");
+
+        System.out.println("dollarsAndStars");
+        dollarsAndStars();
     }
 }
+
+// addEvens
+// 12
+// 12
+// 6
+
+// printSquaresBack
+// 64, 49, 36, 25, 16, 9, 4, 1
+// 81, 64, 49, 36, 25, 16, 9, 4, 1
+// 100, 81, 64, 49, 36, 25, 16, 9, 4, 1
+
+// reverse
+// uhcakiP
+// roloC
+// yadhtriB
+
+// stutter
+// HHeelllloo
+// BByyee
+// aabbcc
+
+// sillyNumbers
+// 000111222333444555666777888999
+// 000111222333444555666777888999
+// 000111222333444555666777888999
+
+// sillyNumbers2
+// 999999999888888887777777666666555554444333221
+// 999999999888888887777777666666555554444333221
+// 999999999888888887777777666666555554444333221
+// 999999999888888887777777666666555554444333221
+
+// dollarsAndStars
+// $$$$$$$**************$$$$$$$
+// **$$$$$$************$$$$$$**
+// ****$$$$$**********$$$$$****
+// ******$$$$********$$$$******
+// ********$$$******$$$********
+// **********$$****$$**********
+// ************$**$************
