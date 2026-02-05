@@ -47,10 +47,22 @@ public class WordPuzzle {
      * @param blackBoxes - a 2D array of Boxes
      */
     public WordPuzzle(boolean [][] blackBoxes){
-
-        
-		
-		
+        puzzle = new Box[blackBoxes.length][blackBoxes[0].length];
+        int num = 1;
+        for (int r = 0; r < puzzle.length; r++) {
+            for (int c = 0; c < puzzle[0].length; c++) {
+                if (blackBoxes[r][c]) {
+                    puzzle[r][c] = new Box(true, 0);
+                }
+                else if (toBeLabeled(r,c,blackBoxes)) {
+                    puzzle[r][c] = new Box(false, num);
+                    num++;
+                }
+                else {
+                    puzzle[r][c] = new Box(false, 0);
+                }
+            }
+        }
     }
 
 
@@ -82,3 +94,11 @@ public class WordPuzzle {
         System.out.println(wp);
     }
 }
+
+// black  1wh  2wh black black black  3wh  4wh  5wh     
+//   6wh white white  7wh black  8wh white white white   
+//   9wh white white white  10wh white black black black 
+//   11wh white black  12wh white white black  13wh  14wh
+//  black black black  15wh white white  16wh white white
+//   17wh  18wh  19wh white black  20wh white white white
+//   21wh white white black black black  22wh white black

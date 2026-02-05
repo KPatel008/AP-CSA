@@ -10,7 +10,7 @@ public class NitalTester {
         int c = 0;
         for (int r = 0; r < arr1.length; r++) {
             for (int i = 0; i < arr2.length; i++) {
-                if (arr1[r] == arr2[i]) {c++;}
+                if (arr1[r] == arr2[i]) {c++; break;}
             }
         }
         if (c == arr1.length) {return true;}
@@ -69,7 +69,18 @@ public class NitalTester {
      *      square has at least one row.
      */
     public static boolean isNital(int[][] square){
-		return false;
+        int[] firstRow = square[0];
+        for (int i = 0; i < square.length; i++) {
+            int[] rows = square[i];
+            if (!hasAllValues(rows, firstRow)) {return false;}
+            for (int j = 0; j < square[0].length; j++) {
+                int[] columns = getColumn(square, j);
+                if (!hasAllValues(firstRow, columns)) {return false;}
+            }
+        } 
+        boolean repeat = containsRepeats(firstRow);
+        if (repeat) {return false;}
+		return true;
     }
 
         public static void main(String[] args){
@@ -105,3 +116,21 @@ public class NitalTester {
 		
     }
 }
+
+// Has all values
+// true
+// false
+// Contains Repeats
+// false
+// true
+// Get Column
+// [3, 1, 2]
+// [1, 3, 7]
+// is Nital
+// true
+// true
+// false
+// false
+// false
+// false
+// false
