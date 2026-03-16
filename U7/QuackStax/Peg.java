@@ -14,7 +14,9 @@ public class Peg {
 	 */
 	public Peg(int peg, int num)
 	{
-		
+		pegNum = peg;
+		discs = new int[num]; 
+		count = 0;
 	}
 	/**
 	 * getPegNum - returns the peg number
@@ -41,6 +43,14 @@ public class Peg {
 	{
 		// TODO add the disc with the given number to the top of the stack on the peg.
 		// don't forget to make sure the move is value (no disc on top of a smaller one)
+		if (count > 0 && discs[count - 1] < whichOne) {
+			System.out.println("Can't do that");
+			return false;}
+		else {
+			discs[count] = whichOne;
+			count++;
+			return true;
+		}
 	}
 	/**
 	 * Remove the top disc from the peg.  
@@ -49,6 +59,9 @@ public class Peg {
 	public int popDisc()
 	{
 		// TODO remove the top disc from the peg.  Return its value.
+		int topDisc = discs[count - 1];
+		discs[count - 1] = 0;
+		return topDisc;
 		
 	}
 	/**

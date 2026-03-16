@@ -10,9 +10,12 @@ public class QuackStax {
 	 * Initialize the stax and pegs
 	 * @param number of discs in the game
 	 */
-	public QuackStax {
+	public QuackStax(int number) {
 		// TODO implement constructor
-		
+		numDiscs = number;
+		peg1 = new Peg(1, numDiscs);
+		peg2 = new Peg(2, 0);
+		peg3 = new Peg(3, 0);
 		
 	}
 	/**
@@ -32,7 +35,7 @@ public class QuackStax {
 	private void moveStax(Peg startPeg, Peg endPeg, Peg extraPeg, int numtoMove)
 	{
 		// TODO move discs(number input) from the start peg to the end peg
-		
+		if (startPeg.)
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
