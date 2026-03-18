@@ -14,9 +14,11 @@ public class QuackStax {
 		// TODO implement constructor
 		numDiscs = number;
 		peg1 = new Peg(1, numDiscs);
-		peg2 = new Peg(2, 0);
-		peg3 = new Peg(3, 0);
-		
+		peg2 = new Peg(2, numDiscs);
+		peg3 = new Peg(3, numDiscs);
+		for (int i = numDiscs; i > 0; i--) {
+			peg1.addDisc(i);
+		}
 	}
 	/**
 	 * solveStax - compute the solution.
@@ -35,7 +37,14 @@ public class QuackStax {
 	private void moveStax(Peg startPeg, Peg endPeg, Peg extraPeg, int numtoMove)
 	{
 		// TODO move discs(number input) from the start peg to the end peg
-		if (startPeg.)
+		if (numtoMove <= 0) {
+			return;
+		}
+		else {
+			moveStax(startPeg, extraPeg, endPeg, numtoMove - 1);
+			startPeg.moveTopDisc(endPeg);
+			moveStax(extraPeg, endPeg, startPeg, numtoMove - 1);
+		}
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -44,3 +53,35 @@ public class QuackStax {
 	}
 
 }
+
+// Moving disc 1 from peg 1 to peg 3
+// Moving disc 2 from peg 1 to peg 2
+// Moving disc 1 from peg 3 to peg 2
+// Moving disc 3 from peg 1 to peg 3
+// Moving disc 1 from peg 2 to peg 1
+// Moving disc 2 from peg 2 to peg 3
+// Moving disc 1 from peg 1 to peg 3
+// Moving disc 4 from peg 1 to peg 2
+// Moving disc 1 from peg 3 to peg 2
+// Moving disc 2 from peg 3 to peg 1
+// Moving disc 1 from peg 2 to peg 1
+// Moving disc 3 from peg 3 to peg 2
+// Moving disc 1 from peg 1 to peg 3
+// Moving disc 2 from peg 1 to peg 2
+// Moving disc 1 from peg 3 to peg 2
+// Moving disc 5 from peg 1 to peg 3
+// Moving disc 1 from peg 2 to peg 1
+// Moving disc 2 from peg 2 to peg 3
+// Moving disc 1 from peg 1 to peg 3
+// Moving disc 3 from peg 2 to peg 1
+// Moving disc 1 from peg 3 to peg 2
+// Moving disc 2 from peg 3 to peg 1
+// Moving disc 1 from peg 2 to peg 1
+// Moving disc 4 from peg 2 to peg 3
+// Moving disc 1 from peg 1 to peg 3
+// Moving disc 2 from peg 1 to peg 2
+// Moving disc 1 from peg 3 to peg 2
+// Moving disc 3 from peg 1 to peg 3
+// Moving disc 1 from peg 2 to peg 1
+// Moving disc 2 from peg 2 to peg 3
+// Moving disc 1 from peg 1 to peg 3

@@ -61,6 +61,7 @@ public class Peg {
 		// TODO remove the top disc from the peg.  Return its value.
 		int topDisc = discs[count - 1];
 		discs[count - 1] = 0;
+		count--;
 		return topDisc;
 		
 	}
