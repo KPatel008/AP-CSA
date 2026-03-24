@@ -10,10 +10,10 @@ import javax.swing.JPanel;
  * Square Rose, a recursive algorithm
  */
 
-public class SquareRose extends JPanel {
+public class BoxFractal extends JPanel {
   private int levels;
 
-  public SquareRose(int lev) {
+  public BoxFractal(int lev) {
     levels = lev;
   }
 
@@ -27,7 +27,7 @@ public class SquareRose extends JPanel {
     int[] ycoord = { yCenter - 128, yCenter + 128, yCenter + 128, yCenter - 128 };
 
     g.setColor(Color.RED);
-    drawAndSplit(g, xcoord, ycoord, 1);
+    drawAndSplit(g, xCenter, yCenter, 1);
 
   }
 
@@ -42,15 +42,12 @@ public class SquareRose extends JPanel {
     return m;
   }
 
-  public void drawAndSplit(Graphics g, int[] x, int[] y, int times) {
+  public void drawAndSplit(Graphics g, int x, int y, int times) {
     if (times >= levels) {
       return;
     }
     else {
-      g.drawPolygon(x, y, 4);
-      int[] x2 = midpoints(x);
-      int[] y2 = midpoints(y);
-      drawAndSplit(g, x2, y2, times + 1);
+      g.fillRect(x, y, 486, 486);
     }
 
   }
@@ -59,7 +56,7 @@ public class SquareRose extends JPanel {
     JFrame window = new JFrame("Fractals");
     window.setBounds(200, 200, 500, 500);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    SquareRose panel = new SquareRose(10);
+    BoxFractal panel = new BoxFractal(5);
     panel.setBackground(Color.WHITE);
     Container c = window.getContentPane();
     c.add(panel);
