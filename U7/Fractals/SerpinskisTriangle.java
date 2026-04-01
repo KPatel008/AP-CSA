@@ -48,7 +48,6 @@ public class SerpinskisTriangle extends JPanel {
             g.fillPolygon(x,y,3);
             return;
         } else {
-            // g.drawPolygon(x, y, 3);
             int[] xMid = midpoints(x);
             int[] yMid = midpoints(y);
 
@@ -60,7 +59,6 @@ public class SerpinskisTriangle extends JPanel {
 
             int[] x3 = { xMid[2], xMid[1], x[2] };
             int[] y3 = { yMid[2], yMid[1], y[2] };
-            // g.drawPolygon(xMid, yMid, 3);
 
             drawAndSplit(g, x1, y1, times + 1);
             drawAndSplit(g, x2, y2, times + 1);

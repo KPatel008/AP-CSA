@@ -23,11 +23,16 @@ public class BoxFractal extends JPanel {
     int xCenter = getWidth() / 2;
     int yCenter = getHeight() / 2;
 
+    int x = xCenter - 243;
+    int y = yCenter - 243;
+    int width = 486;
+    int height = 486;
+
     int[] xcoord = { xCenter - 128, xCenter - 128, xCenter + 128, xCenter + 128 };
     int[] ycoord = { yCenter - 128, yCenter + 128, yCenter + 128, yCenter - 128 };
 
     g.setColor(Color.RED);
-    drawAndSplit(g, xCenter, yCenter, 1);
+    drawAndSplit(g, x, y, width, height, 1);
 
   }
 
@@ -42,12 +47,21 @@ public class BoxFractal extends JPanel {
     return m;
   }
 
-  public void drawAndSplit(Graphics g, int x, int y, int times) {
+  public void drawAndSplit(Graphics g, int x, int y, int width, int height, int times) {
+    
     if (times >= levels) {
+      g.fillRect(x, y, width, height);
       return;
     }
     else {
-      g.fillRect(x, y, 486, 486);
+      int w = width / 3;
+      int h = height / 3;
+
+      drawAndSplit(g, x, y, w, h, times + 1);
+      drawAndSplit(g, x + 2*w, y, w, h, times + 1);
+      drawAndSplit(g, x, y + 2*h, w, h, times + 1);
+      drawAndSplit(g, x + 2*w, y + 2*h, w, h, times + 1);
+      drawAndSplit(g, x + w, y + h, w, h, times + 1);
     }
 
   }
