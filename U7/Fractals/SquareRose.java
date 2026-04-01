@@ -26,7 +26,7 @@ public class SquareRose extends JPanel {
     int[] xcoord = { xCenter - 128, xCenter - 128, xCenter + 128, xCenter + 128 };
     int[] ycoord = { yCenter - 128, yCenter + 128, yCenter + 128, yCenter - 128 };
 
-    g.setColor(Color.RED);
+    g.setColor(new Color(20,70,50));
     drawAndSplit(g, xcoord, ycoord, 1);
 
   }
